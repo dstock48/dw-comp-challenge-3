@@ -8,36 +8,121 @@
   <title>Comp Challenge 3</title>
 </head>
 <body>
-  <header>
-    <button class="menu-side-btn" type="button" name="menu"></button>
-    <input class="search-bar" type="search" placeholder="Search for a job, task, or resume">
-    <button class="new-user-btn" type="button" name="new-user"></button>
-    <button class="calendar-btn" type="button" name="calendar"></button>
-    <button class="menu-grid-btn" type="button" name="menu-grid"></button>
-  </header>
-  <section class="panel-1">
-    <div class="panel-1-heading">
-      <h1 class="position-name">Customer Service Representative</h1>
-      <p><span class="location">San Francisco, CA</span><span class="separator">•</span><a href="#">Preview this post</a></p>
-    </div>
-    <button class="job-status-btn round-btn" type="button" name="job-status">OPEN</button>
-    <button class="bookmark-btn round-btn" type="button" name="bookmark"></button>
-    <button class="edit-btn round-btn" type="button" name="edit"></button>
-    <button class="delete-btn round-btn" type="button" name="delete"></button>
-  </section>
-  <section class="tab-bar">
-    <a class="tab tab-active" href="#">summary</a>
-    <a class="tab" href="#">applicants</a>
-    <a class="tab" href="#">job board</a>
-    <a class="tab" href="#">interviews</a>
-    <a class="tab" href="#">activity</a>
-    <a class="tab" href="#">broadcast</a>
-    <a class="tab" href="#">notifications</a>
-  </section>
-  <main>
-    
-  </main>
+  <aside class="side-menu">
 
+  </aside>
+
+  <main>
+    <header>
+      <button class="menu-side-btn" type="button" name="menu"></button>
+      <input class="search-bar" type="search" placeholder="Search for a job, task, or resume">
+      <button class="new-user-btn" type="button" name="new-user"></button>
+      <button class="calendar-btn" type="button" name="calendar"></button>
+      <button class="menu-grid-btn" type="button" name="menu-grid"></button>
+    </header>
+    <section class="panel-1">
+      <div class="panel-1-heading">
+        <h1 class="position-name">Customer Service Representative</h1>
+        <p><span class="location">San Francisco, CA</span><span class="separator">•</span><a href="#">Preview this post</a></p>
+      </div>
+      <button class="job-status-btn round-btn" type="button" name="job-status">OPEN</button>
+      <button class="bookmark-btn round-btn" type="button" name="bookmark"></button>
+      <button class="edit-btn round-btn" type="button" name="edit"></button>
+      <button class="delete-btn round-btn" type="button" name="delete"></button>
+    </section>
+    <section class="tab-bar">
+      <a class="tab tab-active" href="#">summary</a>
+      <a class="tab" href="#">applicants</a>
+      <a class="tab" href="#">job board</a>
+      <a class="tab" href="#">interviews</a>
+      <a class="tab" href="#">activity</a>
+      <a class="tab" href="#">broadcast</a>
+      <a class="tab" href="#">notifications</a>
+    </section>
+    <section class="main-panel">
+      <section class="graphs">
+
+      </section>
+
+      <div class="divider">
+        <hr><button class="show-hide"></button><hr>
+      </div>
+
+      <section class="job-info">
+        <table class="job-info-table">
+          <thead>
+            <tr class="table-header">
+              <th colspan="2">Job Description <button class="job-edit-btn">Edit</button></th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="job-detail-label">Position Title</td>
+              <td class="job-detail-content">Customer Service Representative</td>
+            </tr>
+            <tr>
+              <td class="job-detail-label">Location</td>
+              <td class="job-detail-content">San Francisco, CA</td>
+            </tr>
+            <tr>
+              <td class="job-detail-label">Employment Type</td>
+              <td class="job-detail-content">Full-time</td>
+            </tr>
+            <tr>
+              <td class="job-detail-label">Experience</td>
+              <td class="job-detail-content">Mid-level</td>
+            </tr>
+            <tr>
+              <td class="job-detail-label">Status</td>
+              <td class="job-detail-content">Open</td>
+            </tr>
+            <tr>
+              <td class="job-detail-label">Description</td>
+              <td class="job-detail-content">The Customer Service Representative is responsible for interacting with and providing quality assistance to all radical customers, responsible for keeping up-to-date on the various product shizzle; helping the bidness reduce customer service wait times while doing a backhand spring and eating a ham sandwich.</td>
+            </tr>
+            <tr>
+              <td class="job-detail-label">Hiring Lead</td>
+              <td class="job-detail-content hiring-manager-cell"><img class="hiring-manager-photo" src="../assets/hiring-manager.jpg" alt="">Bree Thomas</td>
+            </tr>
+            <tr>
+              <td class="job-detail-label">Approved Sallary</td>
+              <td class="job-detail-content">$1,000,000,000</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <div class="social">
+          <button class="social-btn facebook">Post to Facebook</button>
+          <button class="social-btn twitter">Tweet this Job</button>
+          <button class="social-btn linkedin">Post to LinkedIn</button>
+          <div class="share-inputs">
+            <div class="share-panel share1">
+              <h3 class="share-heading job-link">Link to this Job</h3>
+              <p class="share-info">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nec vero alia sunt quaerenda contra Carneadeam illam sententiam.</p>
+              <div class="copy-input">
+                <input class="share-input" value="http://www.somemadeupurlthatdoesntreallygoanywhere.org">
+                <button class="copy-btn">Copy</button>
+              </div>
+            </div>
+            <div class="share-panel share2">
+              <h3 class="share-heading widget">Use the Button Widget</h3>
+              <p class="share-info">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nec vero alia sunt quaerenda contra Carneadeam illam sententiam.</p>
+              <div class="copy-input">
+                <input class="share-input" value="http://www.somemadeupurlthatdoesntreallygoanywhere.org">
+                <button class="copy-btn">Copy</button>
+              </div>
+            </div>
+            <div class="share-panel share3">
+              <h3 class="share-heading email">Upload Resumes by Email</h3>
+              <p class="share-info">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nec vero alia sunt quaerenda contra Carneadeam illam sententiam.</p>
+              <input class="share-input email-input" value="fakeEmailAddress@notReal.net">
+            </div>
+          </div>
+        </div>
+      </section>
+    </section>
+
+  </main>
   <script
   src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
   integrity="sha256-k2WSCIexGzOj3Euiig+TlR8gA0EmPjuc79OEeY5L45g="
