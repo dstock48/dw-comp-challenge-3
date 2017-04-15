@@ -15,6 +15,7 @@
 }
 
 body {
+  position: relative;
   display: flex;
   height: 100%;
   width: 100%;
@@ -79,22 +80,37 @@ main {
   font-size: 12px;
   font-weight: 700;
   text-transform: uppercase;
+  letter-spacing: .7px;
+}
+
+.profile {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  transition: 200ms;
+}
+.profile:hover {
+  color: #16A4FA;
+  cursor: pointer;
 }
 
 .avatar {
   width: 100px;
-  border-radius: 100px;
-  margin: 40px 0 20px;
+  height: 100px;
+  margin: 40px 0 10px;
+  border-radius: 200px;
+  border: 4px solid transparent;
+  transition: 200ms;
+}
+.profile:hover .avatar {
+  border: 4px solid #16A4FA;
 }
 
 .side-menu hr {
   border-color: #4e5767;
-  width: 180px;
+  width: 160px;
   margin: 30px auto;
-}
-
-.user-name {
-
 }
 
 .side-menu h4 {
@@ -266,15 +282,15 @@ header button:hover {
 
 /******** PANEL 1 ********/
 
-.panel-1 {
+.top-panel {
   display: flex;
   align-items: center;
   padding: 40px;
-  color: #616266;
+  color: #919293;
   border-right: 2px solid #F2F2F2;
 }
 
-.panel-1-heading {
+.top-panel-heading {
   flex: 1;
 }
 
@@ -345,7 +361,7 @@ header button:hover {
 }
 
 .tab {
-  padding-bottom: 15px;
+  padding: 15px 0;
   border-bottom: 4px solid transparent;
   margin-right: 40px;
   color: #919293;
@@ -368,6 +384,7 @@ header button:hover {
 .tab-active {
   color: #505050;
   border-bottom: 4px solid #6CC2F5;
+  cursor: default;
 }
 .tab-active:hover {
   color: #505050;
@@ -393,8 +410,6 @@ header button:hover {
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 50%;
-
 }
 
 .circle-graphs {
@@ -419,21 +434,21 @@ header button:hover {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 150px;
-  height: 150px;
+  width: 200px;
+  height: 200px;
   border: 10px solid #DBE4EB;
   border-radius: 200px;
 }
 
 .applicants {
   border-color: #48BAC3;
-  border-right-color: #DBE4EB;
+  border-bottom-color: #DBE4EB;
 }
 
 .applicant-count,
 .interview-count,
 .forward-count {
-  font-size: 30px;
+  font-size: 40px;
   color: #6F7E95;
 }
 
@@ -443,7 +458,8 @@ header button:hover {
   margin-top: 3px;
   color: #6F7E95;
   text-transform: uppercase;
-  font-size: 12px;
+  font-size: 14px;
+  font-weight: 700;
 }
 
 
@@ -451,36 +467,36 @@ header button:hover {
   border-color: #17A2FC;
   border-right-color: #DBE4EB;
   border-bottom-color: #DBE4EB;
+  margin: 0 40px;
 }
 
 .forwards {
   border-color: #B567B0;
   border-top-color: #DBE4EB;
-  border-left-color: #DBE4EB;
+  border-right-color: #DBE4EB;
   border-bottom-color: #DBE4EB;
 }
 
-.bar-chart {
+.chart-container {
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 50%;
+  margin-left: auto;
 }
 
 .chart {
-  height: 150px;
-  width: 100%;
+  display: block;
+  height: 200px;
   margin-bottom: 20px;
-  background-image: url(../assets/graph.png);
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: 50%;
 }
 
 .divider {
   display: flex;
   justify-content: center;
-  margin: 30px auto;
+  padding: 30px 0;
+}
+.divider:hover {
+  cursor: pointer;
 }
 
 .show-hide {
@@ -494,10 +510,11 @@ header button:hover {
   padding: 0;
   margin: 0 10px;
   filter: drop-shadow( 0px 0px 3px hsla(0,0%,25%,.3) );
-  transition: 500ms ease-in-out;
+  transform: rotate(180deg);
+  transition: 500ms cubic-bezier(0.68, -0.55, 0.27, 1.55);
 }
-.show-hide:hover {
-  transform: rotate(540deg);
+.divider:hover .show-hide {
+  transform: rotate(0deg);
 }
 
 .divider hr {
@@ -546,6 +563,7 @@ thead th {
   background-size: 10px;
   background-position: 9px 50%;
   font-weight: 700;
+  transition: 200ms;
 }
 .job-edit-btn:hover {
   background-color: #8594b0;
@@ -588,6 +606,10 @@ tbody tr:not(:last-child) {
   width: 70%;
 }
 
+.salary {
+  font-weight: 700;
+}
+
 .hiring-manager-photo {
   width: 40px;
   border-radius: 100px;
@@ -611,7 +633,8 @@ tbody tr:not(:last-child) {
   background-repeat: no-repeat;
   background-size: 20px;
   background-position: 20px 50%;
-  transition: 200ms ease-in-out;
+  transition: background 200ms ease-in-out,
+              box-shadow 200ms;
 }
 
 .social-btn.facebook {
@@ -619,7 +642,7 @@ tbody tr:not(:last-child) {
   background-image: url(../assets/facebook.svg);
 }
 .social-btn.facebook:hover {
-  background-color: #5b7cc2;
+  background-color: hsl(220,49%,62%);
   background-size: 25px;
 }
 
@@ -628,7 +651,7 @@ tbody tr:not(:last-child) {
   background-image: url(../assets/twitter.svg);
 }
 .social-btn.twitter:hover   {
-  background-color: #1ab6f6;
+  background-color: hsl(197,98%,57%);
   background-size: 25px;
 }
 
@@ -637,16 +660,22 @@ tbody tr:not(:last-child) {
   background-image: url(../assets/linkedin.svg);
 }
 .social-btn.linkedin:hover {
-  background-color: #1288c1;
+  background-color: hsl(199,95%,47%);
   background-size: 25px;
 }
 
-.share-panel {
-  padding: 30px 0;
+.share-inputs {
+  display: flex;
+  flex-direction: column;
+}
+
+.share-card {
+  margin: 30px 0 0;
   color: #6F7E95;
 }
 
-.share-panel:not(:last-child) {
+.share-card:not(:last-child) {
+  padding-bottom: 30px;
   border-bottom: 2px solid #D9DEE2;
 }
 
@@ -733,25 +762,22 @@ tbody tr:not(:last-child) {
 /*=======================================
     >>>>>>>>  MEDIA QUERIES  <<<<<<<<
 ========================================*/
-@media (max-width: 1250px) {
+
+
+/*** Under 1400px width***/
+@media (max-width: 1400px) {
   .graphs {
     flex-direction: column;
   }
-  .circle-graph-container {
-    width: 100%;
-  }
 
-  .bar-chart {
+  .chart-container {
+    margin: 40px 0 0 0;
     width: 100%;
-    margin-top: 40px;
-  }
-
-  .chart {
-    height: 200px;
   }
 }
 
-@media (max-width: 1075px) {
+/*** Under 1085px width***/
+@media (max-width: 1085px) {
   .tab:nth-last-child(-n+4) {
     display: none;
   }
@@ -778,26 +804,36 @@ tbody tr:not(:last-child) {
     margin-top: 40px;
     justify-content: space-between;
   }
+
   .social-btn {
     max-width: 200px;
+    background-position: 20px 50%;
+    text-align: right;
+    padding-right: 25px;
   }
 }
 
-@media (max-width: 900px) {
+/*** Under 950px width***/
+@media (max-width: 950px) {
   .side-menu {
-    display: none;
+    position: absolute;
+    top: 0;
+    bottom: 0px;
+    transform: translateX(-200px);
+    transition: 300ms;
+    z-index: 10;
   }
-
 }
 
+/*** Under 800px width***/
 @media (max-width: 800px) {
-  .panel-1 {
+  .top-panel {
     flex-direction: column;
     align-items: center;
   }
 
-  .panel-1-heading h1,
-  .panel-1-heading p {
+  .top-panel-heading h1,
+  .top-panel-heading p {
     text-align: center;
   }
 
@@ -810,11 +846,26 @@ tbody tr:not(:last-child) {
     margin-top: 20px;
   }
 
+  .circle-graphs {
+    flex-direction: column;
+  }
 
+  .circle:not(:last-child) {
+    margin-bottom: 20px;
+  }
+
+  .circle {
+    margin: 0;
+  }
+
+  .interviews {
+    margin: 0 20px;
+  }
 }
 
-@media (max-width: 700px) {
-  .panel-1,
+/*** Under 720px width***/
+@media (max-width: 720px) {
+  .top-panel,
   .tab-bar,
   .main-panel {
     padding: 20px;
@@ -829,33 +880,66 @@ tbody tr:not(:last-child) {
   .menu-grid-btn {
     display: none;
   }
+
   .social-btns {
     flex-direction: column;
   }
+
   .social-btn {
     max-width: 100%;
+    background-position: 15px 50%;
+    text-align: center;
+    padding-right: 0;
   }
 }
 
+/*** Under 600px width***/
 @media (max-width: 600px) {
   .tab:nth-child(3),
   .tab:nth-child(4) {
     display: none;
   }
 
-  header {
-    height: 50px;
+  .circle {
+    width: 200px;
+    height: 200px;
   }
-  .search-bar {
-    font-size: 13px;
+
+  .chart {
+    height: auto;
+    width: 300px;
   }
-  header button.menu-side-btn {
-    width: 50px;
+
+  tbody tr {
+    flex-direction: column;
+  }
+
+  .job-detail-content {
+    width: 100%;
+  }
+
+  .job-detail-label {
+    width: 100%;
   }
 }
 
-@media (max-width: 420px) {
-  .panel-1,
+/*** Under 480px width***/
+@media (max-width: 480px) {
+  header {
+    height: 50px;
+  }
+
+  header button.menu-side-btn {
+    width: 50px;
+  }
+
+  .search-bar {
+    font-size: 12px;
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+
+  .top-panel,
   .tab-bar,
   .main-panel {
     padding: 10px
@@ -869,22 +953,7 @@ tbody tr:not(:last-child) {
     padding-top: 20px;
   }
 
-  .panel-1-heading {
+  .top-panel-heading {
     font-size: 14px;
-  }
-
-  .circle-graphs {
-    flex-direction: column;
-  }
-
-  .circle:not(:last-child) {
-    margin-bottom: 20px;
-  }
-
-  .job-detail-label {
-    width: 130px;
-  }
-  .job-detail-content {
-    width: 160px;;
   }
 }

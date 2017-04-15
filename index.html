@@ -7,10 +7,14 @@
   <link rel="stylesheet" href="css/styles.css">
   <title>Comp Challenge 3</title>
 </head>
+
 <body>
+  <!--++++=== SIDEBAR ===++++-->
   <aside class="side-menu">
-    <img src="../assets/MC.png" alt="" class="avatar">
-    <p class="user-name">Michael Scott</p>
+    <div class="profile">
+      <img src="../assets/MC.png" alt="" class="avatar">
+      <p class="user-name">Michael Scott</p>
+    </div>
     <hr>
     <h4>Main</h4>
     <ul class="main-menu">
@@ -39,6 +43,7 @@
     </ul>
   </aside>
 
+  <!--++++=== MAIN CONTENT ===++++-->
   <main>
     <header>
       <button class="menu-side-btn" type="button" name="menu"></button>
@@ -47,8 +52,10 @@
       <button class="calendar-btn" type="button" name="calendar"></button>
       <button class="menu-grid-btn" type="button" name="menu-grid"></button>
     </header>
-    <section class="panel-1">
-      <div class="panel-1-heading">
+
+    <!--++++=== TOP PANEL ===++++-->
+    <section class="top-panel">
+      <div class="top-panel-heading">
         <h1 class="position-name">Customer Service Representative</h1>
         <p><span class="location">San Francisco, CA</span><span class="separator">•</span><a href="#">Preview this post</a></p>
       </div>
@@ -59,6 +66,7 @@
         <button class="delete-btn round-btn" type="button" name="delete"></button>
       </div>
     </section>
+
     <section class="tab-bar">
       <a class="tab tab-active" href="#">summary</a>
       <a class="tab" href="#">applicants</a>
@@ -69,9 +77,11 @@
       <a class="tab" href="#">notifications</a>
       <a class="tab tab-more" href="#">more...</a>
     </section>
-    <section class="main-panel">
-      <section class="graphs">
 
+    <section class="main-panel">
+      <!--++++=== CHARTS & GRAPHS ===++++-->
+      <section class="graphs">
+        <!--++++=== CIRCLE INFOGRAPHIC ===++++-->
         <div class="circle-graph-container">
           <div class="circle-graphs">
             <div class="circle applicants">
@@ -89,21 +99,19 @@
           </div>
           <button class="round-btn">TOTALS • Out of 5,231 views</button>
         </div>
-
-        <div class="bar-chart">
-          <div class="chart">
-
-          </div>
+        <!--++++=== BAR CHART ===++++-->
+        <div class="chart-container">
+          <img class="chart" src="../assets/graph.png" alt="weekly-stats">
           <button class="round-btn">APPLICANTS/DAY</button>
         </div>
-
       </section>
-
+      <!--++++=== DIVIDER ===++++-->
       <div class="divider">
         <hr><button class="show-hide"></button><hr>
       </div>
 
       <section class="job-info">
+        <!--++++=== JOB DETAILS TABLE ===++++-->
         <table class="job-info-table">
           <thead>
             <tr class="table-header">
@@ -140,12 +148,13 @@
               <td class="job-detail-content hiring-manager-cell"><img class="hiring-manager-photo" src="../assets/MC.png" alt="">Michael Scott</td>
             </tr>
             <tr>
-              <td class="job-detail-label">Approved Sallary</td>
-              <td class="job-detail-content">$1,000,000,000</td>
+              <td class="job-detail-label">Approved Salary</td>
+              <td class="job-detail-content salary">$1,000,000,000</td>
             </tr>
           </tbody>
         </table>
 
+        <!--++++=== SOCIAL / SHARE SECTION ===++++-->
         <div class="social">
           <div class="social-btns">
             <button class="social-btn facebook">Post to Facebook</button>
@@ -153,7 +162,7 @@
             <button class="social-btn linkedin">Post to LinkedIn</button>
           </div>
           <div class="share-inputs">
-            <div class="share-panel share1">
+            <div class="share-card">
               <h3 class="share-heading job-link">Link to this Job</h3>
               <p class="share-info">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nec vero alia sunt quaerenda contra Carneadeam illam sententiam.</p>
               <div class="copy-input">
@@ -161,7 +170,7 @@
                 <button class="copy-btn">Copy</button>
               </div>
             </div>
-            <div class="share-panel share2">
+            <div class="share-card">
               <h3 class="share-heading widget">Use the Button Widget</h3>
               <p class="share-info">This widget embeds the buttons for sharing the job for submitting a resume on your website.</p>
               <div class="copy-input">
@@ -169,7 +178,7 @@
                 <button class="copy-btn">Copy</button>
               </div>
             </div>
-            <div class="share-panel share3">
+            <div class="share-card">
               <h3 class="share-heading email">Upload Resumes by Email</h3>
               <p class="share-info">You can automatically upload multiple resumes to this job by emailing the address below.</p>
               <a href="#"class="share-input email-input">mscott@dundermifflin.com</a>
@@ -178,8 +187,8 @@
         </div>
       </section>
     </section>
-
   </main>
+  <!--++++=== JQUERY  ===++++-->
   <script
   src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
   integrity="sha256-k2WSCIexGzOj3Euiig+TlR8gA0EmPjuc79OEeY5L45g="
