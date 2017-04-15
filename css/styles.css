@@ -438,6 +438,12 @@ header button:hover {
   height: 200px;
   border: 10px solid #DBE4EB;
   border-radius: 200px;
+  transform: rotate(-45deg);
+}
+
+.circle-chart-data {
+  transform: rotate(45deg);
+  text-align: center;
 }
 
 .applicants {
