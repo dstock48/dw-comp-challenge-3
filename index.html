@@ -9,7 +9,34 @@
 </head>
 <body>
   <aside class="side-menu">
-
+    <img src="../assets/MC.png" alt="" class="avatar">
+    <p class="user-name">Michael Scott</p>
+    <hr>
+    <h4>Main</h4>
+    <ul class="main-menu">
+      <li class="item item-home">Home</li>
+      <li class="item item-jobs">Jobs</li>
+      <li class="item item-resumes">Resumes</li>
+      <li class="item item-tasks">Tasks</li>
+      <li class="item item-calendar">Calendar</li>
+    </ul>
+    <hr>
+    <h4>Admin</h4>
+    <ul class="main-menu">
+      <li class="item item-users">Users</li>
+      <li class="item item-locations">Locations</li>
+      <li class="item item-workflow">Workflow</li>
+      <li class="item item-job-boards">Job Boards</li>
+      <li class="item item-social">Social</li>
+    </ul>
+    <hr>
+    <h4>Categories</h4>
+    <ul class="main-menu">
+      <label for="administrative"><input type="checkbox" id="administrative" value=""> Administrative</label>
+      <label for="design"><input type="checkbox" id="design" value=""> Design</label>
+      <label for="executive"><input type="checkbox" id="executive" value=""> Executive</label>
+      <label for="human-resources"><input type="checkbox" id="human-resources" value=""> Human Resources</label>
+    </ul>
   </aside>
 
   <main>
@@ -25,10 +52,12 @@
         <h1 class="position-name">Customer Service Representative</h1>
         <p><span class="location">San Francisco, CA</span><span class="separator">•</span><a href="#">Preview this post</a></p>
       </div>
-      <button class="job-status-btn round-btn" type="button" name="job-status">OPEN</button>
-      <button class="bookmark-btn round-btn" type="button" name="bookmark"></button>
-      <button class="edit-btn round-btn" type="button" name="edit"></button>
-      <button class="delete-btn round-btn" type="button" name="delete"></button>
+      <div class="main-panel-btns">
+        <button class="job-status-btn round-btn" type="button" name="job-status">OPEN</button>
+        <button class="bookmark-btn round-btn" type="button" name="bookmark"></button>
+        <button class="edit-btn round-btn" type="button" name="edit"></button>
+        <button class="delete-btn round-btn" type="button" name="delete"></button>
+      </div>
     </section>
     <section class="tab-bar">
       <a class="tab tab-active" href="#">summary</a>
@@ -38,9 +67,35 @@
       <a class="tab" href="#">activity</a>
       <a class="tab" href="#">broadcast</a>
       <a class="tab" href="#">notifications</a>
+      <a class="tab tab-more" href="#">more...</a>
     </section>
     <section class="main-panel">
       <section class="graphs">
+
+        <div class="circle-graph-container">
+          <div class="circle-graphs">
+            <div class="circle applicants">
+              <p class="applicant-count">3,154</p>
+              <p class="applicant-label">applicants</p>
+            </div>
+            <div class="circle interviews">
+              <p class="interview-count">1,546</p>
+              <p class="interview-label">interviews</p>
+            </div>
+            <div class="circle forwards">
+              <p class="forward-count">1,546</p>
+              <p class="forward-label">forwards</p>
+            </div>
+          </div>
+          <button class="round-btn">TOTALS • Out of 5,231 views</button>
+        </div>
+
+        <div class="bar-chart">
+          <div class="chart">
+
+          </div>
+          <button class="round-btn">APPLICANTS/DAY</button>
+        </div>
 
       </section>
 
@@ -82,7 +137,7 @@
             </tr>
             <tr>
               <td class="job-detail-label">Hiring Lead</td>
-              <td class="job-detail-content hiring-manager-cell"><img class="hiring-manager-photo" src="../assets/hiring-manager.jpg" alt="">Bree Thomas</td>
+              <td class="job-detail-content hiring-manager-cell"><img class="hiring-manager-photo" src="../assets/MC.png" alt="">Michael Scott</td>
             </tr>
             <tr>
               <td class="job-detail-label">Approved Sallary</td>
@@ -92,30 +147,32 @@
         </table>
 
         <div class="social">
-          <button class="social-btn facebook">Post to Facebook</button>
-          <button class="social-btn twitter">Tweet this Job</button>
-          <button class="social-btn linkedin">Post to LinkedIn</button>
+          <div class="social-btns">
+            <button class="social-btn facebook">Post to Facebook</button>
+            <button class="social-btn twitter">Tweet this Job</button>
+            <button class="social-btn linkedin">Post to LinkedIn</button>
+          </div>
           <div class="share-inputs">
             <div class="share-panel share1">
               <h3 class="share-heading job-link">Link to this Job</h3>
               <p class="share-info">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nec vero alia sunt quaerenda contra Carneadeam illam sententiam.</p>
               <div class="copy-input">
-                <input class="share-input" value="http://www.somemadeupurlthatdoesntreallygoanywhere.org">
+                <input id="job-url" class="share-input" value="http://www.somemadeupurlthatdoesntreallygoanywhere.org">
                 <button class="copy-btn">Copy</button>
               </div>
             </div>
             <div class="share-panel share2">
               <h3 class="share-heading widget">Use the Button Widget</h3>
-              <p class="share-info">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nec vero alia sunt quaerenda contra Carneadeam illam sententiam.</p>
+              <p class="share-info">This widget embeds the buttons for sharing the job for submitting a resume on your website.</p>
               <div class="copy-input">
-                <input class="share-input" value="http://www.somemadeupurlthatdoesntreallygoanywhere.org">
+                <input id="widget-url" class="share-input" value="http://www.somemadeupurlthatdoesntreallygoanywhere.org">
                 <button class="copy-btn">Copy</button>
               </div>
             </div>
             <div class="share-panel share3">
               <h3 class="share-heading email">Upload Resumes by Email</h3>
-              <p class="share-info">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nec vero alia sunt quaerenda contra Carneadeam illam sententiam.</p>
-              <input class="share-input email-input" value="fakeEmailAddress@notReal.net">
+              <p class="share-info">You can automatically upload multiple resumes to this job by emailing the address below.</p>
+              <a href="#"class="share-input email-input">mscott@dundermifflin.com</a>
             </div>
           </div>
         </div>
