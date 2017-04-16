@@ -107,20 +107,20 @@ main {
   border: 4px solid #16A4FA;
 }
 
-.side-menu hr {
+.side-menu-divider {
   border-color: #4e5767;
   width: 160px;
   margin: 30px auto;
 }
 
-.side-menu h4 {
+.side-menu-section-heading {
   align-self: baseline;
   margin: 0 0 10px 20px;
   font-size: 12px;
   color: #5e6778;
 }
 
-.main-menu {
+.side-menu-section {
   padding: 0;
   list-style: none;
   align-self: baseline;
@@ -128,7 +128,7 @@ main {
   margin: 0;
 }
 
-.main-menu li {
+.side-menu-section li {
   padding: 15px 0 15px 50px;
   display: flex;
 }
@@ -178,7 +178,7 @@ main {
 .item-social:hover {background-image: url(../assets/share-active.svg);}
 
 
-.main-menu label {
+.side-menu-section label {
   display: block;
   margin: 20px;
 }
@@ -187,19 +187,19 @@ input[type="checkbox"] {
   margin-right: 10px;
 }
 
-.main-menu label[for="administrative"] {
+.side-menu-section label[for="administrative"] {
   color: #FED603;
 }
 
-.main-menu label[for="design"] {
+.side-menu-section label[for="design"] {
   color: #2BACFD;
 }
 
-.main-menu label[for="executive"] {
+.side-menu-section label[for="executive"] {
   color: #E6185F;
 }
 
-.main-menu label[for="human-resources"] {
+.side-menu-section label[for="human-resources"] {
   color: #01AD89;
 }
 
@@ -210,12 +210,10 @@ input[type="checkbox"] {
 
 header {
   display: flex;
-  height: 75px;
-  background-color: #fff;
-  border-bottom: 2px solid #F2F2F2;
+  flex-direction: column;
 }
 
-header button {
+.search-panel button {
   width: 75px;
   background-repeat: no-repeat;
   background-size: 20px;
@@ -223,8 +221,15 @@ header button {
   transition: background-color 200ms;
   height: 100%;
 }
-header button:hover {
+.search-panel button:hover {
   background-color: #16A4FA;
+}
+
+.search-panel {
+  display: flex;
+  width: 100%;
+  height: 75px;
+  border-bottom: 2px solid #F2F2F2;
 }
 
 .search-bar {
@@ -282,7 +287,7 @@ header button:hover {
 
 /******** PANEL 1 ********/
 
-.top-panel {
+.heading-panel {
   display: flex;
   align-items: center;
   padding: 40px;
@@ -290,7 +295,7 @@ header button:hover {
   border-right: 2px solid #F2F2F2;
 }
 
-.top-panel-heading {
+.heading-panel-heading {
   flex: 1;
 }
 
@@ -317,7 +322,7 @@ header button:hover {
   margin: 0 10px;
 }
 
-.main-panel-btns {
+.heading-panel-btns {
   display: flex;
 }
 
@@ -325,7 +330,7 @@ header button:hover {
   background-image: url(../assets/circle-open.svg);
   background-position: 15px 50%;
   padding: 0 15px 0 30px;
-  font-weight: bold;
+  font-weight: 700;
   margin: 0;
 }
 
@@ -438,7 +443,7 @@ header button:hover {
   align-items: center;
   width: 200px;
   height: 200px;
-  border: 10px solid #DBE4EB;
+  border: 10px solid;
   border-radius: 200px;
   transform: rotate(-45deg);
 }
@@ -448,21 +453,12 @@ header button:hover {
   text-align: center;
 }
 
-.applicants {
-  border-color: #48BAC3;
-  border-bottom-color: #DBE4EB;
-}
-
-.applicant-count,
-.interview-count,
-.forward-count {
+.data-count {
   font-size: 40px;
   color: #6F7E95;
 }
 
-.applicant-label,
-.interview-label,
-.forward-label {
+.data-label {
   margin-top: 3px;
   color: #6F7E95;
   text-transform: uppercase;
@@ -470,19 +466,17 @@ header button:hover {
   font-weight: 700;
 }
 
+.applicants {   /* TL     TR       BR     BL */
+  border-color: #48BAC3 #48BAC3 #DBE4EB #48BAC3;
+}
 
-.interviews {
-  border-color: #17A2FC;
-  border-right-color: #DBE4EB;
-  border-bottom-color: #DBE4EB;
+.interviews {   /* TL     TR       BR     BL */
+  border-color: #17A2FC #DBE4EB #DBE4EB #17A2FC;
   margin: 0 40px;
 }
 
-.forwards {
-  border-color: #B567B0;
-  border-top-color: #DBE4EB;
-  border-right-color: #DBE4EB;
-  border-bottom-color: #DBE4EB;
+.forwards {     /* TL     TR       BR     BL */
+  border-color: #DBE4EB #DBE4EB #DBE4EB #B567B0;
 }
 
 .chart-container {
@@ -793,8 +787,8 @@ tbody tr:not(:last-child) {
   }
 }
 
-/*** Under 1085px width***/
-@media (max-width: 1085px) {
+/*** Under 1100px width***/
+@media (max-width: 1100px) {
   .tab:nth-last-child(-n+4) {
     display: none;
   }
@@ -831,8 +825,6 @@ tbody tr:not(:last-child) {
 @media (max-width: 950px) {
   .side-menu {
     position: absolute;
-    top: 0;
-    bottom: 0px;
     transform: translateX(-200px);
     transition: 300ms;
     z-index: 10;
@@ -841,30 +833,23 @@ tbody tr:not(:last-child) {
 
 /*** Under 800px width***/
 @media (max-width: 800px) {
-  .top-panel {
+  .heading-panel {
     flex-direction: column;
     align-items: center;
+    padding-top: 20px;
   }
 
-  .top-panel-heading h1,
-  .top-panel-heading p {
+  .heading-panel-heading h1,
+  .heading-panel-heading p {
     text-align: center;
+  }
+
+  .heading-panel-btns {
+    margin-top: 20px;
   }
 
   .tab-bar {
     justify-content: center;
-  }
-
-  .main-panel-btns {
-    margin-top: 20px;
-  }
-
-  .circle-graphs {
-    flex-direction: column;
-  }
-
-  .circle:not(:last-child) {
-    margin-bottom: 20px;
   }
 
   .circle {
@@ -883,7 +868,6 @@ tbody tr:not(:last-child) {
 
 /*** Under 720px width***/
 @media (max-width: 720px) {
-  .top-panel,
   .tab-bar,
   .main-panel {
     padding: 20px;
@@ -897,6 +881,19 @@ tbody tr:not(:last-child) {
   .new-user-btn,
   .menu-grid-btn {
     display: none;
+  }
+
+  .circle {
+    width: 150px;
+    height: 150px;
+  }
+
+  .data-count {
+    font-size: 30px;
+  }
+
+  .data-label {
+    font-size: 12px;
   }
 
   .social-btns {
@@ -918,9 +915,25 @@ tbody tr:not(:last-child) {
     display: none;
   }
 
+  .circle-graphs {
+    flex-direction: column;
+  }
+
   .circle {
     width: 200px;
     height: 200px;
+  }
+
+  .circle:not(:last-child) {
+    margin-bottom: 20px;
+  }
+
+  .data-count {
+    font-size: 40px;
+  }
+
+  .data-label {
+    font-size: 14px;
   }
 
   tbody tr {
@@ -938,11 +951,11 @@ tbody tr:not(:last-child) {
 
 /*** Under 480px width***/
 @media (max-width: 480px) {
-  header {
+  .search-panel {
     height: 50px;
   }
 
-  header button.menu-side-btn {
+  .search-panel .menu-side-btn {
     width: 50px;
   }
 
@@ -952,7 +965,14 @@ tbody tr:not(:last-child) {
     padding-bottom: 0;
   }
 
-  .top-panel,
+  .heading-panel {
+    padding: 20px 10px 20px 10px;
+  }
+
+  .heading-panel-heading {
+    font-size: 14px;
+  }
+
   .tab-bar,
   .main-panel {
     padding: 10px
@@ -964,9 +984,5 @@ tbody tr:not(:last-child) {
 
   .main-panel {
     padding-top: 20px;
-  }
-
-  .top-panel-heading {
-    font-size: 14px;
   }
 }

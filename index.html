@@ -9,33 +9,33 @@
 </head>
 
 <body>
-  <!--++++=== SIDEBAR ===++++-->
-  <aside class="side-menu">
+  <!--++++=== SIDE MENU ===++++-->
+  <aside role="navigation" class="side-menu">
     <div class="profile">
-      <img src="{{ site.baseurl }}/../assets/MC.png" alt="" class="avatar">
+      <img class="avatar" src="{{ site.baseurl }}/../assets/MC.png" alt="Profile Picture">
       <p class="user-name">Michael Scott</p>
     </div>
-    <hr>
-    <h4>Main</h4>
-    <ul class="main-menu">
+    <hr class="side-menu-divider">
+    <h4 class="side-menu-section-heading">Main</h4>
+    <ul class="side-menu-section">
       <li class="item item-home">Home</li>
       <li class="item item-jobs">Jobs</li>
       <li class="item item-resumes">Resumes</li>
       <li class="item item-tasks">Tasks</li>
       <li class="item item-calendar">Calendar</li>
     </ul>
-    <hr>
-    <h4>Admin</h4>
-    <ul class="main-menu">
+    <hr class="side-menu-divider">
+    <h4 class="side-menu-section-heading">Admin</h4>
+    <ul class="side-menu-section">
       <li class="item item-users">Users</li>
       <li class="item item-locations">Locations</li>
       <li class="item item-workflow">Workflow</li>
       <li class="item item-job-boards">Job Boards</li>
       <li class="item item-social">Social</li>
     </ul>
-    <hr>
-    <h4>Categories</h4>
-    <ul class="main-menu">
+    <hr class="side-menu-divider">
+    <h4 class="side-menu-section-heading">Categories</h4>
+    <ul class="side-menu-section">
       <label for="administrative"><input type="checkbox" id="administrative" value=""> Administrative</label>
       <label for="design"><input type="checkbox" id="design" value=""> Design</label>
       <label for="executive"><input type="checkbox" id="executive" value=""> Executive</label>
@@ -46,37 +46,38 @@
   <!--++++=== MAIN CONTENT ===++++-->
   <main>
     <header>
-      <button class="menu-side-btn" type="button" name="menu"></button>
-      <input class="search-bar" type="search" placeholder="Search for a job, task, or resume">
-      <button class="new-user-btn" type="button" name="new-user"></button>
-      <button class="calendar-btn" type="button" name="calendar"></button>
-      <button class="menu-grid-btn" type="button" name="menu-grid"></button>
+      <div class="search-panel">
+        <button class="menu-side-btn" type="button" name="menu"></button>
+        <input class="search-bar" type="search" placeholder="Search for a job, task, or resume">
+        <button class="new-user-btn" type="button" name="new-user"></button>
+        <button class="calendar-btn" type="button" name="calendar"></button>
+        <button class="menu-grid-btn" type="button" name="menu-grid"></button>
+      </div>
+
+      <section class="heading-panel">
+        <div class="heading-panel-heading">
+          <h1 class="position-name">Customer Service Representative</h1>
+          <p><span class="location">San Francisco, CA</span><span class="separator">•</span><a href="#">Preview this post</a></p>
+        </div>
+        <div class="heading-panel-btns">
+          <button class="job-status-btn round-btn" type="button" name="job-status">OPEN</button>
+          <button class="bookmark-btn round-btn" type="button" name="bookmark"></button>
+          <button class="edit-btn round-btn" type="button" name="edit"></button>
+          <button class="delete-btn round-btn" type="button" name="delete"></button>
+        </div>
+      </section>
+
+      <nav class="tab-bar" role="navigation">
+        <a class="tab tab-active" href="#">summary</a>
+        <a class="tab" href="#">applicants</a>
+        <a class="tab" href="#">job board</a>
+        <a class="tab" href="#">interviews</a>
+        <a class="tab" href="#">activity</a>
+        <a class="tab" href="#">broadcast</a>
+        <a class="tab" href="#">notifications</a>
+        <a class="tab tab-more" href="#">more...</a>
+      </nav>
     </header>
-
-    <!--++++=== TOP PANEL ===++++-->
-    <section class="top-panel">
-      <div class="top-panel-heading">
-        <h1 class="position-name">Customer Service Representative</h1>
-        <p><span class="location">San Francisco, CA</span><span class="separator">•</span><a href="#">Preview this post</a></p>
-      </div>
-      <div class="main-panel-btns">
-        <button class="job-status-btn round-btn" type="button" name="job-status">OPEN</button>
-        <button class="bookmark-btn round-btn" type="button" name="bookmark"></button>
-        <button class="edit-btn round-btn" type="button" name="edit"></button>
-        <button class="delete-btn round-btn" type="button" name="delete"></button>
-      </div>
-    </section>
-
-    <section class="tab-bar">
-      <a class="tab tab-active" href="#">summary</a>
-      <a class="tab" href="#">applicants</a>
-      <a class="tab" href="#">job board</a>
-      <a class="tab" href="#">interviews</a>
-      <a class="tab" href="#">activity</a>
-      <a class="tab" href="#">broadcast</a>
-      <a class="tab" href="#">notifications</a>
-      <a class="tab tab-more" href="#">more...</a>
-    </section>
 
     <section class="main-panel">
       <!--++++=== CHARTS & GRAPHS ===++++-->
@@ -86,20 +87,20 @@
           <div class="circle-graphs">
             <div class="circle applicants">
               <div class="circle-chart-data">
-                <p class="applicant-count">3,154</p>
-                <p class="applicant-label">applicants</p>
+                <p class="data-count">3,154</p>
+                <p class="data-label">applicants</p>
               </div>
             </div>
             <div class="circle interviews">
               <div class="circle-chart-data">
-                <p class="interview-count">1,546</p>
-                <p class="interview-label">interviews</p>
+                <p class="data-count">1,546</p>
+                <p class="data-label">interviews</p>
               </div>
             </div>
             <div class="circle forwards">
               <div class="circle-chart-data">
-                <p class="forward-count">1,546</p>
-                <p class="forward-label">forwards</p>
+                <p class="data-count">1,546</p>
+                <p class="data-label">forwards</p>
               </div>
             </div>
           </div>
