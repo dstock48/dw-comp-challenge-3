@@ -771,7 +771,7 @@ tbody tr:not(:last-child) {
 
 
 /*** Under 1400px width***/
-@media (max-width: 1400px) {
+@media (max-width: 1450px) {
   .graphs {
     flex-direction: column;
   }
@@ -779,6 +779,11 @@ tbody tr:not(:last-child) {
   .chart-container {
     margin: 40px 0 0 0;
     width: 100%;
+  }
+
+  .chart {
+    width: 700px;
+    height: auto;
   }
 }
 
@@ -843,7 +848,6 @@ tbody tr:not(:last-child) {
     text-align: center;
   }
 
-
   .tab-bar {
     justify-content: center;
   }
@@ -866,6 +870,11 @@ tbody tr:not(:last-child) {
 
   .interviews {
     margin: 0 20px;
+  }
+
+  .chart {
+    height: auto;
+    width: 100%;
   }
 }
 
@@ -909,11 +918,6 @@ tbody tr:not(:last-child) {
   .circle {
     width: 200px;
     height: 200px;
-  }
-
-  .chart {
-    height: auto;
-    width: 300px;
   }
 
   tbody tr {
