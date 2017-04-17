@@ -36,10 +36,10 @@
     <hr class="side-menu-divider">
     <h4 class="side-menu-section-heading">Categories</h4>
     <ul class="side-menu-section">
-      <label for="administrative"><input type="checkbox" id="administrative" value=""> Administrative</label>
-      <label for="design"><input type="checkbox" id="design" value=""> Design</label>
-      <label for="executive"><input type="checkbox" id="executive" value=""> Executive</label>
-      <label for="human-resources"><input type="checkbox" id="human-resources" value=""> Human Resources</label>
+      <label for="administrative"><input type="checkbox" id="administrative" checked> Administrative</label>
+      <label for="design"><input type="checkbox" id="design"> Design</label>
+      <label for="executive"><input type="checkbox" id="executive"> Executive</label>
+      <label for="human-resources"><input type="checkbox" id="human-resources"> Human Resources</label>
     </ul>
   </aside>
 
@@ -47,11 +47,11 @@
   <main>
     <header>
       <div class="search-panel">
-        <button class="menu-side-btn" type="button" name="menu"></button>
+        <button class="menu-side-btn" aria-label="side menu icon" name="menu"></button>
         <input class="search-bar" type="search" placeholder="Search for a job, task, or resume">
-        <button class="new-user-btn" type="button" name="new-user"></button>
-        <button class="calendar-btn" type="button" name="calendar"></button>
-        <button class="menu-grid-btn" type="button" name="menu-grid"></button>
+        <button class="new-user-btn" aria-label="new user icon" name="new-user"></button>
+        <button class="calendar-btn" aria-label="calendar icon" name="calendar"></button>
+        <button class="menu-grid-btn" aria-label="grid menu icon" name="menu-grid"></button>
       </div>
 
       <section class="heading-panel">
@@ -60,10 +60,10 @@
           <p><span class="location">San Francisco, CA</span><span class="separator">•</span><a href="#">Preview this post</a></p>
         </div>
         <div class="heading-panel-btns">
-          <button class="job-status-btn round-btn" type="button" name="job-status">OPEN</button>
-          <button class="bookmark-btn round-btn" type="button" name="bookmark"></button>
-          <button class="edit-btn round-btn" type="button" name="edit"></button>
-          <button class="delete-btn round-btn" type="button" name="delete"></button>
+          <button class="job-status-btn round-btn" aria-label="job status" name="job-status">OPEN</button>
+          <button class="bookmark-btn round-btn" aria-label="bookmark icon" name="bookmark"></button>
+          <button class="edit-btn round-btn" aria-label="edit icon" name="edit"></button>
+          <button class="delete-btn round-btn" aria-label="delete icon" name="delete"></button>
         </div>
       </section>
 
@@ -108,13 +108,13 @@
         </div>
         <!--++++=== BAR CHART ===++++-->
         <div class="chart-container">
-          <img class="chart" src="{{ site.baseurl }}/../assets/graph.png" alt="weekly-stats">
+          <img class="chart" src="{{ site.baseurl }}/../assets/graph.png" alt="weekly-stats-chart">
           <button class="round-btn">APPLICANTS/DAY</button>
         </div>
       </section>
       <!--++++=== DIVIDER ===++++-->
       <div class="divider">
-        <hr><button class="show-hide"></button><hr>
+        <hr><button class="show-hide" aria-label="show/hide icon" aria-expanded="true"></button><hr>
       </div>
 
       <section class="job-info">
@@ -152,7 +152,7 @@
             </tr>
             <tr>
               <td class="job-detail-label">Hiring Lead</td>
-              <td class="job-detail-content hiring-manager-cell"><img class="hiring-manager-photo" src="{{ site.baseurl }}/../assets/MC.png" alt="">Michael Scott</td>
+              <td class="job-detail-content hiring-manager-cell"><img class="hiring-manager-photo" src="{{ site.baseurl }}/../assets/MC.png" alt="user photo">Michael Scott</td>
             </tr>
             <tr>
               <td class="job-detail-label">Approved Salary</td>
