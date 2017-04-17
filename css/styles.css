@@ -646,8 +646,9 @@ tbody tr:not(:last-child) {
   background-position: 12px 50%;
 }
 .social-btn.facebook:hover {
-  background-color: hsl(220,49%,62%);
+  background-color: hsl(220,56%,58%);
   background-size: 25px;
+  background-position-X: 10px;
 }
 
 .social-btn.twitter {
@@ -656,8 +657,9 @@ tbody tr:not(:last-child) {
   background-position: 16px 50%;
 }
 .social-btn.twitter:hover   {
-  background-color: hsl(197,98%,57%);
+  background-color: hsl(197,100%,53%);
   background-size: 25px;
+  background-position-X: 14px;
 }
 
 .social-btn.linkedin {
@@ -666,8 +668,9 @@ tbody tr:not(:last-child) {
   background-position: 15px 50%;
 }
 .social-btn.linkedin:hover {
-  background-color: hsl(199,95%,47%);
+  background-color: hsl(199,98%,43%);
   background-size: 25px;
+  background-position-X: 13px;
 }
 
 .share-inputs {
