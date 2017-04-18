@@ -734,6 +734,7 @@ tbody tr:not(:last-child) {
 
 .copy-input {
   display: flex;
+  border-radius: 0 3px 3px 0;
   box-shadow: 0 1px 3px rgba(51,51,51,.2);
 }
 
