@@ -17,8 +17,8 @@
 body {
   position: relative;
   display: flex;
-  height: 100%;
   width: 100%;
+  height: 100%;
   margin: 0;
   font-family: Roboto, sans-serif;
   font-size: 16px;
@@ -60,22 +60,17 @@ a:hover {
   text-decoration: underline;
 }
 
-main {
-  flex: 1;
-}
-
-
 /*=======================================
     >>>>>>>  S I D E  M E N U  <<<<<<<
 ========================================*/
 
 .side-menu {
+  display: flex;
   min-width: 200px;
   min-height: 100%;
-  background-color: #354052;
-  display: flex;
   flex-direction: column;
   align-items: center;
+  background-color: #354052;
   color: #8594b0;
   font-size: 12px;
   font-weight: 700;
@@ -99,8 +94,8 @@ main {
   width: 100px;
   height: 100px;
   margin: 40px 0 10px;
-  border-radius: 200px;
   border: 4px solid transparent;
+  border-radius: 200px;
   transition: 200ms;
 }
 .profile:hover .avatar {
@@ -108,43 +103,42 @@ main {
 }
 
 .side-menu-divider {
-  border-color: #4e5767;
   width: 160px;
   margin: 30px auto;
+  border-color: #4e5767;
 }
 
 .side-menu-section-heading {
-  align-self: baseline;
   margin: 0 0 10px 20px;
+  align-self: baseline;
   font-size: 12px;
   color: #5e6778;
 }
 
 .side-menu-section {
-  padding: 0;
-  list-style: none;
-  align-self: baseline;
   width: 100%;
   margin: 0;
+  padding: 0;
+  list-style: none;
 }
 
 .side-menu-section li {
-  padding: 15px 0 15px 50px;
   display: flex;
+  padding: 15px 0 15px 50px;
 }
 
 .item {
+  border-left: 4px solid transparent;
   background-repeat: no-repeat;
   background-size: 16px;
   background-position: 20px 45%;
   transition: 200ms;
-  border-left: 4px solid transparent;
 }
 .item:hover {
   color: white;
-  cursor: pointer;
-  background-color: #2F3748;
   border-left: 4px solid #16A4FA;
+  background-color: #2F3748;
+  cursor: pointer;
 }
 
 .item-home {background-image: url(../assets/home.svg);}
@@ -215,12 +209,12 @@ header {
 
 .search-panel button {
   width: 75px;
+  height: 100%;
   padding: 0;
   background-repeat: no-repeat;
   background-size: 20px;
   background-position: 50%;
   transition: background-color 200ms;
-  height: 100%;
 }
 .search-panel button:hover {
   background-color: #16A4FA;
@@ -234,8 +228,8 @@ header {
 }
 
 .search-bar {
-  height: 100%;
   flex: 1;
+  height: 100%;
   padding: 20px 20px 20px 50px;
   border: 2px solid transparent;
   border-left-color: #F2F2F2;
@@ -271,16 +265,16 @@ header {
 }
 
 .calendar-btn {
-  background-image: url(../assets/calendar.svg);
   border-left: 2px solid #F2F2F2;
+  background-image: url(../assets/calendar.svg);
 }
 .calendar-btn:hover {
   background-image: url(../assets/calendar-hover.svg);
 }
 
 .menu-grid-btn {
-  background-image: url(../assets/menu-grid.svg);
   border-left: 2px solid #F2F2F2;
+  background-image: url(../assets/menu-grid.svg);
 }
 .menu-grid-btn:hover {
   background-image: url(../assets/menu-grid-hover.svg);
@@ -292,8 +286,8 @@ header {
   display: flex;
   align-items: center;
   padding: 40px;
-  color: #919293;
   border-right: 2px solid #F2F2F2;
+  color: #919293;
 }
 
 .heading-panel-heading {
@@ -305,18 +299,18 @@ header {
 }
 
 .position-name {
-  font-size: 28px;
-  font-weight: 400;
   margin-bottom: 10px;
   color: #616266;
+  font-size: 28px;
+  font-weight: 400;
 }
 
 .location {
+  padding-left: 20px;
   background-image: url(../assets/location.svg);
   background-repeat: no-repeat;
   background-size: 15px;
   background-position: 0 50%;
-  padding-left: 20px;
 }
 
 .separator {
@@ -332,11 +326,11 @@ header {
 }
 
 button.job-status-btn {
+  margin: 0;
+  padding: 0 15px 0 30px;
   background-image: url(../assets/circle-open.svg);
   background-position: 15px 50%;
-  padding: 0 15px 0 30px;
   font-weight: 700;
-  margin: 0;
 }
 
 .bookmark-btn {
@@ -363,39 +357,39 @@ button.job-status-btn {
 
 .tab-bar {
   display: flex;
-  padding: 0 40px;
+  padding-left: 40px;
   border-right: 2px solid #F2F2F2;
 }
 
 .tab {
+  margin-right: 40px;
   padding: 15px 0;
   border-bottom: 4px solid transparent;
-  margin-right: 40px;
   color: #919293;
-  text-transform: uppercase;
   font-size: 12px;
   font-weight: 700;
   letter-spacing: 0.8px;
+  text-transform: uppercase;
   transition: color 200ms,
               border 200ms;
 }
-.tab:last-child {
+.tab:nth-last-child(-n+2) {
   margin-right: 0;
 }
 .tab:hover {
+  border-bottom: 4px solid;
   color: #919293;
   text-decoration: none;
-  border-bottom: 4px solid;
 }
 
 .tab-active {
-  color: #505050;
   border-bottom: 4px solid #6CC2F5;
+  color: #505050;
   cursor: default;
 }
 .tab-active:hover {
-  color: #505050;
   border-bottom: 4px solid #6CC2F5;
+  color: #505050;
 }
 
 .tab.tab-more {
@@ -403,9 +397,9 @@ button.job-status-btn {
 }
 
 .main-panel {
-  background-color: #EDF2F6;
   border-top: 2px solid #E7EBEF;
   padding: 40px;
+  background-color: #EDF2F6;
 }
 
 .graphs {
@@ -423,18 +417,18 @@ button.job-status-btn {
 
 .circle-graphs {
   display: flex;
-  flex-wrap: wrap;
+  justify-content: space-around;
   align-items: center;
+  flex-wrap: wrap;
   margin-bottom: 20px;
   width: 100%;
-  justify-content: space-around;
 }
 
 .graphs .round-btn{
-  background-color: #fff;
   width: auto;
-  padding: 0 20px;
   margin: 0px;
+  padding: 0 20px;
+  background-color: #fff;
   font-weight: 700;
 }
 
@@ -456,16 +450,16 @@ button.job-status-btn {
 }
 
 .data-count {
-  font-size: 40px;
   color: #6F7E95;
+  font-size: 40px;
 }
 
 .data-label {
   margin-top: 3px;
   color: #6F7E95;
-  text-transform: uppercase;
   font-size: 14px;
   font-weight: 700;
+  text-transform: uppercase;
 }
 
 .applicants {   /* TL     TR       BR     BL */
@@ -507,12 +501,12 @@ button.job-status-btn {
   display: block;
   min-width: 40px;
   height: 30px;
+  margin: 0 10px;
+  padding: 0;
   background-image: url(../assets/arrow.svg);
   background-repeat: no-repeat;
-  background-position: 50%;
   background-size: 30px;
-  padding: 0;
-  margin: 0 10px;
+  background-position: 50%;
   filter: drop-shadow( 0px 0px 3px hsla(0,0%,25%,.3) );
   transform: rotate(180deg);
   transition: 500ms cubic-bezier(0.68, -0.55, 0.27, 1.55);
@@ -537,18 +531,18 @@ button.job-status-btn {
 
 .job-info-table {
   width: 66.6666%;
-  background-color: #fff;
   border: none;
-  box-shadow: 0 1px 5px rgba(51,51,51,.4);
   border-collapse: collapse;
+  background-color: #fff;
+  box-shadow: 0 1px 5px rgba(51,51,51,.4);
 }
 
 thead {
-  text-align: left;
+  padding: 20px 0;
   background-color: #6F7E95;
   color: #fff;
+  text-align: left;
   text-transform: uppercase;
-  padding: 20px 0;
 }
 
 thead th {
@@ -557,18 +551,18 @@ thead th {
 }
 
 .job-edit-btn {
-  background-color: #7E8CA7;
   margin-left: 20px;
   padding: 10px;
   padding-left: 25px;
   border-radius: 3px;
   color: #fff;
-  text-transform: uppercase;
   background-image: url(../assets/edit-job.svg);
+  background-color: #7E8CA7;
   background-repeat: no-repeat;
   background-size: 10px;
   background-position: 9px 50%;
   font-weight: 700;
+  text-transform: uppercase;
   transition: 200ms;
 }
 .job-edit-btn:hover {
@@ -581,8 +575,8 @@ tbody tr {
   min-height: 30px;
   margin: 0 auto;
   padding: 30px 0;
-  font-size: 13px;
   color: #6F7E95;
+  font-size: 13px;
   line-height: 1.5;
 }
 
@@ -605,6 +599,7 @@ tbody tr:not(:last-child) {
 .job-detail-label {
   width: 30%;
   font-weight: 700;
+  text-align: left;
   text-transform: uppercase;
 }
 
@@ -618,8 +613,8 @@ tbody tr:not(:last-child) {
 
 .hiring-manager-photo {
   width: 40px;
-  border-radius: 100px;
   margin-right: 10px;
+  border-radius: 100px;
 }
 
 .social {
@@ -634,10 +629,10 @@ tbody tr:not(:last-child) {
   border-radius: 3px;
   width: 100%;
   height: 50px;
-  color: #fff;
-  font-size: 14px;
   background-repeat: no-repeat;
   background-size: 20px;
+  color: #fff;
+  font-size: 14px;
   transition: background 200ms ease-in-out,
               box-shadow 200ms;
 }
@@ -693,7 +688,6 @@ tbody tr:not(:last-child) {
 .share-heading {
   margin-bottom: 10px;
   padding-left: 30px;
-  vertical-align: middle;
   background-size: 20px;
   background-repeat: no-repeat;
   background-position: 0 50%;
@@ -712,43 +706,42 @@ tbody tr:not(:last-child) {
 }
 
 .share-info {
-  font-size: 13px;
   margin-bottom: 10px;
+  font-size: 13px;
   line-height: 1.4;
 }
 
 .share-input {
   display: flex;
   align-items: center;
-  padding: 10px;
-  height: 40px;
   width: 80%;
-  background-color: #fff;
-  box-shadow: 0 1px 3px rgba(51,51,51,.2);
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
+  height: 40px;
+  padding: 10px;
   border: none;
-  color: #6F7E95;
-  outline: none;
   border: 2px solid transparent;
+  background-color: #fff;
+  color: #6F7E95;
+  text-overflow: ellipsis;
   transition: 200ms;
+  outline: none;
+  overflow: hidden;
+  white-space: nowrap;
 }
-.share-input:focus {
+.share-input:not(.email-input):focus {
   border: 2px solid #4DBABE;
   border-right: none;
 }
 
 .copy-input {
   display: flex;
+  box-shadow: 0 1px 3px rgba(51,51,51,.2);
 }
 
 .copy-btn {
   width: 20%;
-  background-color: #4DBABE;
   border-radius: 0 3px 3px 0;
+  background-color: #4DBABE;
   color: #fff;
-  box-shadow: 0 1px 3px rgba(51,51,51,.2);
   transition: 200ms;
 }
 .copy-btn:hover {
@@ -758,11 +751,7 @@ tbody tr:not(:last-child) {
 .email-input {
   width: 100%;
   font-size: 13px;
-}
-.email-input:focus {
-  border: 2px solid transparent;
-  border-right: none;
-  text-decoration: none;
+  box-shadow: 0 1px 3px rgba(51,51,51,.2);
 }
 .email-input:hover {
   background-color: #41a7ab;
@@ -792,8 +781,8 @@ tbody tr:not(:last-child) {
   }
 }
 
-/*** Under 1100px width***/
-@media (max-width: 1100px) {
+/*** Under 1155px width***/
+@media (max-width: 1155px) {
   .tab:nth-last-child(-n+4) {
     display: none;
   }
@@ -817,8 +806,8 @@ tbody tr:not(:last-child) {
 
   .social-btns {
     display: flex;
-    margin-top: 40px;
     justify-content: space-between;
+    margin-top: 40px;
   }
 
   .social-btn {
@@ -834,10 +823,18 @@ tbody tr:not(:last-child) {
     transition: 300ms;
     z-index: 10;
   }
+
+  .tab:nth-last-child(-n+4) {
+    display: block;
+  }
+
+  .tab.tab-more {
+    display: none;
+  }
 }
 
-/*** Under 800px width***/
-@media (max-width: 800px) {
+/*** Under 850px width***/
+@media (max-width: 850px) {
   .heading-panel {
     flex-direction: column;
     align-items: center;
@@ -854,7 +851,16 @@ tbody tr:not(:last-child) {
   }
 
   .tab-bar {
+    padding: 0;
     justify-content: center;
+  }
+
+  .tab:nth-last-child(-n+4) {
+    display: none;
+  }
+
+  .tab.tab-more {
+    display: block;
   }
 
   .circle {
@@ -907,9 +913,9 @@ tbody tr:not(:last-child) {
 
   .social-btn {
     max-width: 100%;
+    padding-right: 0;
     background-position: 15px 50%;
     text-align: center;
-    padding-right: 0;
   }
 }
 
@@ -945,11 +951,12 @@ tbody tr:not(:last-child) {
     flex-direction: column;
   }
 
-  .job-detail-content {
+  .job-detail-label {
     width: 100%;
+    margin-bottom: 3px;
   }
 
-  .job-detail-label {
+  .job-detail-content {
     width: 100%;
   }
 }
@@ -965,9 +972,9 @@ tbody tr:not(:last-child) {
   }
 
   .search-bar {
-    font-size: 12px;
     padding-top: 0;
     padding-bottom: 0;
+    font-size: 12px;
   }
 
   .heading-panel {
