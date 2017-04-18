@@ -12,7 +12,7 @@
   <aside role="navigation" class="side-menu">
     <div class="profile">
       <img class="avatar" src="{{ site.baseurl }}/../assets/MC.png" alt="Profile Picture">
-      <p class="user-name">Michael Scott</p>
+      <p class="user-name">Michael Scott <span class="down-arrow"></span></p>
     </div>
     <hr class="side-menu-divider">
     <h4 class="side-menu-section-heading">Main</h4>
@@ -34,18 +34,39 @@
     </ul>
     <hr class="side-menu-divider">
     <h4 class="side-menu-section-heading">Categories</h4>
-    <ul class="side-menu-section">
-      <label for="administrative"><input type="checkbox" id="administrative" checked> Administrative</label>
-      <label for="design"><input type="checkbox" id="design"> Design</label>
-      <label for="executive"><input type="checkbox" id="executive"> Executive</label>
-      <label for="human-resources"><input type="checkbox" id="human-resources"> Human Resources</label>
-    </ul>
+    <div class="side-menu-checkbox-section">
+
+      <label class="checkbox">
+        <input type="checkbox" id="administrative" checked="checked">
+        <div class="checkbox-element admin"></div>
+        Administrative
+      </label>
+
+      <label class="checkbox">
+        <input type="checkbox" id="design">
+        <div class="checkbox-element design"></div>
+        Design
+      </label>
+
+      <label class="checkbox">
+        <input type="checkbox" id="executive">
+        <div class="checkbox-element executive"></div>
+        Executive
+      </label>
+
+      <label class="checkbox">
+        <input type="checkbox" id="human-resources">
+        <div class="checkbox-element human-resources"></div>
+        Human Resources
+      </label>
+
+    </div>
   </aside>
   <!--++++=== MAIN CONTENT ===++++-->
   <main>
     <header>
       <div class="search-panel">
-        <button class="menu-side-btn" aria-label="side menu icon" name="menu"></button>
+        <button class="menu-side-btn" aria-label="side menu icon" name="menu"><span class="left-arrow"></span></button>
         <input class="search-bar" type="search" placeholder="Search for a job, task, or resume">
         <button class="new-user-btn" aria-label="new user icon" name="new-user"></button>
         <button class="calendar-btn" aria-label="calendar icon" name="calendar"></button>
