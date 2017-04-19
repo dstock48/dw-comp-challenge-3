@@ -70,7 +70,7 @@ a:hover {
 
 .side-menu {
   display: flex;
-  min-width: 200px;
+  min-width: 210px;
   min-height: 100%;
   flex-direction: column;
   align-items: center;
@@ -125,7 +125,7 @@ a:hover {
 }
 
 .side-menu-divider {
-  width: 160px;
+  width: 170px;
   margin: 30px auto;
   border-color: #4e5767;
 }
@@ -477,7 +477,7 @@ button.job-status-btn {
 .graphs {
   display: flex;
   align-items: center;
-  max-width: 1600px;
+  max-width: 1500px;
   margin: 0 auto;
 }
 
@@ -491,8 +491,7 @@ button.job-status-btn {
   display: flex;
   justify-content: space-around;
   align-items: center;
-  flex-wrap: wrap;
-  margin-bottom: 20px;
+  margin-bottom: 40px;
   width: 100%;
 }
 
@@ -509,8 +508,8 @@ button.job-status-btn {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 200px;
-  height: 200px;
+  width: 180px;
+  height: 180px;
   border: 10px solid;
   border-radius: 200px;
   transform: rotate(-45deg);
@@ -522,14 +521,14 @@ button.job-status-btn {
 }
 
 .data-count {
-  color: #6F7E95;
-  font-size: 40px;
+  color: #616266;
+  font-size: 45px;
 }
 
 .data-label {
   margin-top: 3px;
   color: #6F7E95;
-  font-size: 14px;
+  font-size: 16px;
   font-weight: 700;
   text-transform: uppercase;
 }
@@ -597,7 +596,7 @@ button.job-status-btn {
 
 .job-info {
   display: flex;
-  max-width: 1600px;
+  max-width: 1500px;
   margin: 0 auto;
 }
 
@@ -646,7 +645,7 @@ tbody tr {
   width: 90%;
   min-height: 30px;
   margin: 0 auto;
-  padding: 30px 0;
+  padding: 28px 0;
   color: #6F7E95;
   font-size: 13px;
   line-height: 1.5;
@@ -697,7 +696,6 @@ tbody tr:not(:last-child) {
 }
 
 .social-btn {
-  margin-bottom: 20px;
   border-radius: 3px;
   width: 100%;
   height: 50px;
@@ -707,6 +705,9 @@ tbody tr:not(:last-child) {
   font-size: 14px;
   transition: background 200ms ease-in-out,
               box-shadow 200ms;
+}
+.social-btn:not(:last-child) {
+  margin-bottom: 20px;
 }
 
 .social-btn.facebook {
@@ -778,7 +779,7 @@ tbody tr:not(:last-child) {
 }
 
 .share-info {
-  margin-bottom: 10px;
+  margin-bottom: 15px;
   font-size: 13px;
   line-height: 1.4;
 }
@@ -838,7 +839,7 @@ tbody tr:not(:last-child) {
 
 
 /*** Under 1400px width***/
-@media (max-width: 1450px) {
+@media (max-width: 1400px) {
   .graphs {
     flex-direction: column;
   }
@@ -849,14 +850,14 @@ tbody tr:not(:last-child) {
   }
 
   .chart {
-    width: 700px;
+    width: 650px;
     height: auto;
   }
 }
 
 /*** Under 1155px width***/
 @media (max-width: 1155px) {
-  .tab:nth-last-child(-n+4) {
+  .tab:nth-last-child(-n+3) {
     display: none;
   }
 
@@ -886,13 +887,16 @@ tbody tr:not(:last-child) {
   .social-btn {
     max-width: 200px;
   }
+  .social-btn:not(:last-child) {
+    margin-bottom: 0px;
+  }
 }
 
-/*** Under 950px width***/
-@media (max-width: 950px) {
+/*** Under 980px width***/
+@media (max-width: 980px) {
   .side-menu {
     position: absolute;
-    transform: translateX(-200px);
+    transform: translateX(-210px);
     transition: 300ms;
     z-index: 10;
   }
@@ -947,6 +951,7 @@ tbody tr:not(:last-child) {
   .chart {
     height: auto;
     width: 100%;
+    max-width: 650px;
   }
 }
 
@@ -990,6 +995,9 @@ tbody tr:not(:last-child) {
     background-position: 15px 50%;
     text-align: center;
   }
+  .social-btn:not(:last-child) {
+    margin-bottom: 20px;
+  }
 }
 
 /*** Under 600px width***/
@@ -1013,11 +1021,11 @@ tbody tr:not(:last-child) {
   }
 
   .data-count {
-    font-size: 40px;
+    font-size: 50px;
   }
 
   .data-label {
-    font-size: 14px;
+    font-size: 18px;
   }
 
   tbody tr {
